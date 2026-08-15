@@ -7,7 +7,7 @@ export function Navbar() {
   return (
     <header className="fixed top-0 z-50 w-full pt-3 md:pt-5">
       <div
-        className={`mx-auto flex max-w-6xl items-center justify-between px-4 py-2.5 transition-all duration-500 md:px-6 ${
+        className={`mx-auto flex flex-wrap max-w-6xl items-center justify-between px-4 py-3 transition-all duration-500 md:px-6 md:py-2.5 ${
           scrolled
             ? "rounded-full border border-border/60 bg-background/70 shadow-soft backdrop-blur-xl"
             : "rounded-full border border-transparent bg-transparent"
@@ -22,7 +22,7 @@ export function Navbar() {
             ramandeep<span className="text-primary">/</span>singh
           </span>
         </Link>
-        <nav className="hidden items-center gap-7 font-mono text-xs uppercase tracking-widest text-muted-foreground md:flex">
+        <nav className="order-3 mt-4 flex w-full items-center justify-center gap-5 font-mono text-[10px] uppercase tracking-widest text-muted-foreground md:order-none md:mt-0 md:w-auto md:justify-start md:gap-7 md:text-xs">
           <Link to="/work" className="transition-colors hover:text-foreground">
             01 · Work
           </Link>

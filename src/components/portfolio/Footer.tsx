@@ -38,10 +38,9 @@ export function Footer() {
           <div className="md:col-span-5">
             <div className="grid grid-cols-2 gap-3">
               {[
-                { label: "Dribbble", href: "#" },
-                { label: "Instagram", href: "#" },
-                { label: "Behance", href: "#" },
-                { label: "DeviantArt", href: "#" },
+                { label: "Dribbble", href: "https://dribbble.com/raman926x" },
+                { label: "Instagram", href: "https://www.instagram.com/ethos.ui/?utm_source=ig_web_button_share_sheet" },
+                { label: "Behance", href: "https://www.behance.net/ramandeepsingh171" },
               ].map((s) => (
                 <a
                   key={s.label}
