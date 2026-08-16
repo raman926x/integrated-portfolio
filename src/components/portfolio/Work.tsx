@@ -189,11 +189,7 @@ function ProjectFrame({ project }: { project: Project }) {
 
 function BrowserFrame({ project }: { project: Project }) {
   return (
-    <div className="group relative">
-      {/* Accent shadow plate */}
-      <div
-        className={`absolute -inset-2 -z-10 translate-x-3 translate-y-3 rounded-2xl ${accentBg[project.accent]} opacity-90 transition-transform duration-500 group-hover:translate-x-5 group-hover:translate-y-5`}
-      />
+    <div className="group relative transition-all duration-500 hover:scale-[1.02]">
       <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-frame">
         {/* Browser chrome */}
         <div className="flex items-center gap-2 border-b border-border/60 bg-background/50 px-4 py-3">
@@ -224,10 +220,7 @@ function BrowserFrame({ project }: { project: Project }) {
 
 function TabletFrame({ project }: { project: Project }) {
   return (
-    <div className="group relative">
-      <div
-        className={`absolute -inset-2 -z-10 -translate-x-3 translate-y-3 rounded-[2rem] ${accentBg[project.accent]} opacity-90 transition-transform duration-500 group-hover:-translate-x-5 group-hover:translate-y-5`}
-      />
+    <div className="group relative transition-all duration-500 hover:scale-[1.02]">
       <div className="overflow-hidden rounded-[2rem] border-[10px] border-foreground/90 bg-foreground shadow-frame">
         <div className="flex items-center justify-between bg-background/30 px-5 py-2 font-mono text-[10px] uppercase tracking-widest text-bone/70">
           <span>09:06</span>

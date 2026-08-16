@@ -1,4 +1,5 @@
 import { useScrollY } from "@/hooks/use-scroll-progress";
+import marqueeImg from "@/assets/marquee-board.png";
 
 export function Hero() {
   const y = useScrollY();
@@ -71,10 +72,10 @@ export function Hero() {
             >
               <a
                 href="#work"
-                className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-pop transition-transform hover:scale-[1.04]"
+                className="neon-button inline-flex items-center gap-2"
               >
                 See the work
-                <span className="transition-transform group-hover:translate-x-1">↗</span>
+                <span>↗</span>
               </a>
               <a
                 href="#about"
@@ -111,14 +112,12 @@ export function Hero() {
                   <span>↳ scroll</span>
                 </div>
               </div>
-              {/* Sticker */}
+              {/* Static tilted marquee image */}
               <div
-                className="absolute -left-6 -top-6 hidden h-24 w-24 place-items-center rounded-full bg-primary text-primary-foreground shadow-pop md:grid"
-                style={{ transform: `rotate(${-12 + y * 0.05}deg)` }}
+                className="absolute -left-6 -top-12 hidden md:block w-36 drop-shadow-2xl z-10"
+                style={{ transform: `rotate(-6deg)` }}
               >
-                <div className="text-center font-display text-[11px] font-bold uppercase leading-tight tracking-wider">
-                  hi<br />stranger<br />:)
-                </div>
+                <img src={marqueeImg} alt="Marquee Board" className="w-full h-auto object-contain" />
               </div>
               <div
                 className="absolute -right-4 -bottom-4 rotate-6 rounded-lg bg-amber px-3 py-2 font-mono text-[11px] font-semibold uppercase text-amber-foreground shadow-soft"

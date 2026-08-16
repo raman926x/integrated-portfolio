@@ -1,6 +1,6 @@
-import caseHeroJPH from "@/assets/case-hero-JPH.png";
-import caseShotJPH from "@/assets/case-shot-JPH.png";
-import caseColoursJPH from "@/assets/case-colours-JPH.png";
+import caseHeroGRID from "@/assets/case-hero-GRID.png";
+import caseShotGRID from "@/assets/case-shot-JPH.png";
+import caseColoursGRID from "@/assets/case-colours-JPH.png";
 import caseHeroCCP from "@/assets/case-hero-CCP.png";
 import caseShotCCP from "@/assets/case-shot-CCP.png";
 import caseColoursCCP from "@/assets/case-colours-CCP.png";
@@ -47,69 +47,69 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
   {
     slug: "hmi-project-1",
-    title: "[HMI Project 1 Title]",
-    tagline: "[A short, punchy tagline about this dashboard or interface]",
+    title: "GRID Cluster",
+    tagline: "A modern solution to the large screens problem.",
     year: "2026",
     role: "HMI Concept Design",
     timeline: "4 weeks",
-    stack: ["Protopie", "Figma", "Blender"],
+    stack: ["Figma", "Blender"],
     hero: {
-      src: caseHeroJPH, // Replace this image import at the top later
-      alt: "HMI interface screenshot",
+      src: caseHeroGRID,
+      alt: "the 4-screen setup.",
     },
     introduction: [
-      "[Write a paragraph introducing the concept. What kind of vehicle is this for? An EV? A hypercar? A rugged off-roader?]",
-      "[Write a second paragraph explaining the motivation behind this personal passion project.]",
+      "The automotive industry has been obsessed recently with moving everything into screens. This concept uses that ideology but in a more human-centred way.",
+      "The GRID Cluster eliminates the fundamental problem of moving core functionalities to screens by assigning separate screens for separate tasks.",
     ],
     problem: {
       statement:
-        "[What is the core problem with existing dashboards in this category? E.g., too many submenus, distracting touch targets, etc.]",
+        "The most significant problem I face with large touch-based screens is how distracting they are while driving. I have to actively take my eyes off the road to operate them which is fundamentally flawed UX, and yet the industry continues to abuse them because ✨money✨.",
       points: [
-        "[Point 1: e.g., Glare and low-light legibility issues.]",
-        "[Point 2: e.g., Cognitive overload during high-speed driving.]",
-        "[Point 3: e.g., Lack of physical tactile feedback.]",
+        "Lack of separation of tasks.",
+        "Cognitive overload during high-speed driving.]",
+        "Lack of physical tactile feedback.]",
       ],
     },
     designStudy: {
       intro:
-        "[Briefly introduce your design approach. How did you solve the problems listed above?]",
+        "Human brains are wired to associate certain places with certain tasks. If the controls for ADAS and HVAC are in the same physical space, the brain is going to fumble. My approach fixes that issue by dividing the functionality of one large screen into four small screens.",
       steps: [
         {
           label: "01",
-          title: "Ergonomics & Safety",
-          body: "[Explain how you sized the touch targets and positioned critical information close to the driver's line of sight.]",
+          title: "Media",
+          body: "The media screen shows the currently playing media by default, scrolling brings up the queue, and further the equalizer.",
         },
         {
           label: "02",
-          title: "Visual System",
-          body: "[Explain the color palette and typography. Why did you choose high-contrast or warm tones?]",
+          title: "Navigation",
+          body: "The default navigation screen is the full-size map, with the traffic data and saved places to follow.",
         },
         {
           label: "03",
-          title: "Interaction Physics",
-          body: "[Describe any prototyping you did for animations or transitions. How does the interface react to the driver?]",
+          title: "HVAC",
+          body: "The climate control system is the most commonly fucked-up UI in the industry. All it needs is one screen to show all the information a standard dual-zone system requires.",
         },
         {
           label: "04",
-          title: "Edge Cases",
-          body: "[How does the UI adapt to night mode or direct sunlight?]",
+          title: "Vehicle",
+          body: "All vehicle-related information such as the power-torque output, tyre pressures, and fuel economy are assigned to this screen.",
         },
       ],
     },
     screenshots: [
       {
-        src: caseShotJPH,
+        src: caseShotGRID,
         alt: "HMI cluster view",
-        caption: "[Describe this specific screen or feature.]",
+        caption: "The functionality of a large screen compacted smartly.",
       },
       {
-        src: caseColoursJPH,
+        src: caseColoursGRID,
         alt: "HMI infotainment view",
-        caption: "[Describe this specific screen or feature.]",
+        caption: "Simply, easy-to-read colour palette. Nothing fancy.",
       },
     ],
     result: {
-      body: "[Summarize the final outcome of this concept. What did you learn from designing it?]",
+      body: "Infotainment systems built around human psychology can actually aid in safe driving, which should be the highest priority goal for any corporation large enough to produce cars.",
       metrics: [
         { value: "0.5s", label: "Target glance time" },
         { value: "60fps", label: "Prototyped animation framerate" },
@@ -117,7 +117,7 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
     conclusion: [
-      "[Final wrap up thought. E.g., This project solidified my belief that automotive UI must prioritize safety over screen real-estate.]",
+      "This project solidified my belief that automotive UI must prioritize safety over screen real-estate, and monetary benefits.",
     ],
   },
   {

@@ -10,13 +10,8 @@ export function ScrollFx() {
   const progress = useScrollProgress();
   const y = useScrollY();
 
-  // Cycle the acid accent hue across scroll for a "the page is alive" feel.
-  const hue = 95 + progress * 220;
-  const cssVars = {
-    "--acid": `oklch(0.9 0.2 ${hue})`,
-    "--ring": `oklch(0.9 0.2 ${hue})`,
-    "--primary": `oklch(0.9 0.2 ${hue})`,
-  } as React.CSSProperties;
+  // Removed dynamic hue cycling to preserve static 80s Amber
+  const cssVars = {} as React.CSSProperties;
 
   return (
     <div style={cssVars} className="contents">
