@@ -22,7 +22,9 @@ export function Footer() {
         <div className="mt-12 grid grid-cols-1 items-end gap-8 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-7">
             <a
-              href="mailto:ramandeep.design@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=ramandeep.design@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-4 font-display text-2xl font-semibold text-foreground md:text-4xl"
             >
               ramandeep.design@gmail.com
