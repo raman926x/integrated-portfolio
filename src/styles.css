@@ -119,7 +119,7 @@
   --popover-foreground: var(--foreground);
 
   /* Brand */
-  --primary: oklch(0.92 0.21 115);              /* acid lime */
+  --primary: oklch(0.78 0.18 60);               /* amber */
   --primary-foreground: oklch(0.14 0.012 260);
   --secondary: oklch(0.22 0.014 260);
   --secondary-foreground: var(--foreground);
@@ -133,10 +133,10 @@
 
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 14%);
-  --ring: oklch(0.92 0.21 115);
+  --ring: oklch(0.78 0.18 60);
 
   /* Bold palette */
-  --acid: oklch(0.92 0.21 115);                 /* lime */
+  --acid: oklch(0.78 0.18 60);                  /* amber override */
   --acid-foreground: oklch(0.14 0.012 260);
   --amber: oklch(0.78 0.18 60);
   --amber-foreground: oklch(0.14 0.012 260);
