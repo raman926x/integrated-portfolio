@@ -63,7 +63,7 @@ export function Hero() {
             >
               I'm <span className="text-foreground">Ramandeep Singh</span> — a
               UI/UX & product designer in Chandigarh building loud, opinionated
-              interfaces dashboards, software and the occasional weird
+              automotive HMIs, digital clusters, and the occasional weird
               little side quest.
             </p>
             <div

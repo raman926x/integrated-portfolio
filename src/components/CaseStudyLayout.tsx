@@ -26,21 +26,36 @@ function Figure({
   alt,
   caption,
   priority,
+  loop = true,
 }: {
   src: string;
   alt: string;
   caption?: string | undefined;
   priority?: boolean | undefined;
+  loop?: boolean;
 }) {
+  const isVideo = src.match(/\.(mp4|webm|ogg|mov)(\?.*)?$/i);
+
   return (
     <figure className="w-full">
       <div className="overflow-hidden rounded-xl border border-border bg-card shadow-frame">
-        <img
-          src={src}
-          alt={alt}
-          loading={priority ? "eager" : "lazy"}
-          className="block w-full"
-        />
+        {isVideo ? (
+          <video
+            src={src}
+            autoPlay
+            loop={loop}
+            muted
+            playsInline
+            className="block w-full"
+          />
+        ) : (
+          <img
+            src={src}
+            alt={alt}
+            loading={priority ? "eager" : "lazy"}
+            className="block w-full"
+          />
+        )}
       </div>
       {caption ? (
         <figcaption className="mt-4 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">

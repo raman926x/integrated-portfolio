@@ -1,10 +1,10 @@
 import { useScrollY } from "@/hooks/use-scroll-progress";
 import { useInView } from "@/hooks/use-scroll-progress";
 import { Link } from "@tanstack/react-router";
-import projectJPH from "@/assets/project-JPH.png";
-import projectCCP from "@/assets/project-CCP.png";
-import projectACB from "@/assets/project-ACB.png";
-import projectNDL from "@/assets/project-NDL.png";
+import projectJPH from "@/assets/case-hero-GRID.png";
+import projectCCP from "@/assets/case-hero-VINT.png";
+import projectACB from "@/assets/case-hero-WIDE.png";
+import projectNDL from "@/assets/case-hero-EINK.png";
 
 type Frame = "browser" | "tablet" | "device";
 type Accent = "acid" | "amber" | "electric" | "magenta";
@@ -26,54 +26,54 @@ const projects: Project[] = [
   {
     slug: "hmi-project-1",
     num: "01",
-    title: "[HMI Project 1 Title]",
+    title: "GRID Cluster",
     client: "Concept / Passion Project",
     tags: ["Automotive", "HMI", "Cluster"],
     year: "2026",
-    image: projectJPH, // Replace this image import later
+    image: projectJPH,
     frame: "browser",
     accent: "acid",
     description:
-      "[Short paragraph describing the concept dashboard or interface. E.g., An exploration of dark-mode cluster interfaces for hypercars.]",
+      "A modern solution to the large screens problem. Eliminating the fundamental problem of moving core functionalities to screens by assigning separate screens for separate tasks.",
   },
   {
     slug: "hmi-project-2",
     num: "02",
-    title: "[HMI Project 2 Title]",
+    title: "Retro Motorcycle Navigation",
     client: "Concept / Passion Project",
-    tags: ["Infotainment", "EV", "Dashboard"],
+    tags: ["Motorcycle", "Navigation", "Retro", "EL Display"],
     year: "2025",
     image: projectCCP,
     frame: "browser",
     accent: "amber",
     description:
-      "[Short description of the second concept.]",
+      "Don't you just hate it when they slap a TFT-screen on an otherwise classic motorcycle? I do. A custom electroluminescent display for the Vintana Voyager.",
   },
   {
     slug: "hmi-project-3",
     num: "03",
-    title: "[HMI Project 3 Title]",
+    title: "Widescreen EV Cluster",
     client: "Concept / Passion Project",
-    tags: ["HUD", "Safety", "Prototyping"],
+    tags: ["EV", "Widescreen", "Widgets", "ADAS"],
     year: "2025",
     image: projectACB,
     frame: "browser",
     accent: "electric",
     description:
-      "[Short description of the third concept.]",
+      "The correct way to do three screens. A modular, ultra-wide dashboard designed to let users fully personalize their layout, featuring integrated digital mirrors and blind-spot monitors.",
   },
   {
     slug: "hmi-project-4",
     num: "04",
-    title: "[HMI Project 4 Title]",
+    title: "E-ink Navigation System",
     client: "Concept / Passion Project",
-    tags: ["Mobile", "Companion App"],
+    tags: ["E-ink", "Minimalism", "Retro", "Navigation"],
     year: "2024",
     image: projectNDL,
     frame: "browser",
-    accent: "magenta",
+    accent: "amber",
     description:
-      "[Short description of the fourth concept.]",
+      "Because an OLED screen in a classic car interior is a crime. A distraction-free, low-refresh navigation panel tailored specifically for classic and minimalist car interiors.",
   },
 ];
 
@@ -102,8 +102,8 @@ export function Work() {
             </h2>
           </div>
           <p className="max-w-sm text-sm text-muted-foreground md:text-base">
-            Four recent projects across editorial web and
-            internal tools. Tap any tile to read the case study.
+            Four recent concepts exploring the future of automotive 
+            interfaces and digital clusters. Tap any tile to read the case study.
           </p>
         </div>
 
@@ -188,14 +188,16 @@ function ProjectFrame({ project }: { project: Project }) {
 }
 
 function BrowserFrame({ project }: { project: Project }) {
+  const isVideo = project.image.match(/\.(mp4|webm|ogg|mov)(\?.*)?$/i);
+  
   return (
     <div className="group relative transition-all duration-500 hover:scale-[1.02]">
       <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-frame">
         {/* Browser chrome */}
         <div className="flex items-center gap-2 border-b border-border/60 bg-background/50 px-4 py-3">
           <span className="h-3 w-3 rounded-full bg-destructive/80" />
-          <span className="h-3 w-3 rounded-full bg-amber/80" />
-          <span className="h-3 w-3 rounded-full bg-primary/80" />
+          <span className="h-3 w-3 rounded-full bg-yellow-500/100" />
+          <span className="h-3 w-3 rounded-full bg-green-500/100" />
           <div className="ml-3 flex-1">
             <div className="mx-auto w-full max-w-md rounded-md border border-border/60 bg-background/60 px-3 py-1 text-center font-mono text-[11px] text-muted-foreground">
               ramandeep.design/work/{project.num}
@@ -206,12 +208,23 @@ function BrowserFrame({ project }: { project: Project }) {
           </span>
         </div>
         <div className="relative aspect-[16/10] overflow-hidden bg-background">
-          <img
-            src={project.image}
-            alt={`${project.title} — ${project.client}`}
-            loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-          />
+          {isVideo ? (
+            <video
+              src={project.image}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+            />
+          ) : (
+            <img
+              src={project.image}
+              alt={`${project.title} — ${project.client}`}
+              loading="lazy"
+              className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+            />
+          )}
         </div>
       </div>
     </div>
@@ -219,6 +232,8 @@ function BrowserFrame({ project }: { project: Project }) {
 }
 
 function TabletFrame({ project }: { project: Project }) {
+  const isVideo = project.image.match(/\.(mp4|webm|ogg|mov)(\?.*)?$/i);
+
   return (
     <div className="group relative transition-all duration-500 hover:scale-[1.02]">
       <div className="overflow-hidden rounded-[2rem] border-[10px] border-foreground/90 bg-foreground shadow-frame">
@@ -232,12 +247,23 @@ function TabletFrame({ project }: { project: Project }) {
           </span>
         </div>
         <div className="relative aspect-[16/10] overflow-hidden bg-black">
-          <img
-            src={project.image}
-            alt={`${project.title} — ${project.client}`}
-            loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-          />
+          {isVideo ? (
+            <video
+              src={project.image}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+            />
+          ) : (
+            <img
+              src={project.image}
+              alt={`${project.title} — ${project.client}`}
+              loading="lazy"
+              className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+            />
+          )}
         </div>
       </div>
     </div>

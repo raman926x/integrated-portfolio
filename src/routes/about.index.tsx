@@ -113,7 +113,7 @@ function AboutRoute() {
             <div className="relative w-full max-w-5xl mx-auto flex justify-around items-center z-10 px-4">
               
               <div className="relative -mt-12 -rotate-3 group hover:z-20 hover:scale-105 transition-all duration-500 cursor-pointer">
-                <img src="/assets/clip.png" alt="Clip" className="absolute -top-6 left-1/2 w-10 h-10 -translate-x-1/2 z-20" />
+                <img src="/assets/clip-hmi.png" alt="Clip" className="absolute -top-6 left-1/2 w-10 h-10 -translate-x-1/2 z-20" />
                 <div className="w-[220px] h-[293px] md:w-[320px] md:h-[426px] bg-[#e5e5e5] p-4 shadow-frame rounded-none">
                   <div className="w-full h-[85%] bg-zinc-300 overflow-hidden flex items-center justify-center">
                     <img src="/about/photos/1.jpg" alt="Photo 1" className="w-full h-full object-cover" />
@@ -122,7 +122,7 @@ function AboutRoute() {
               </div>
 
               <div className="relative mt-20 rotate-2 group hover:z-20 hover:scale-105 transition-all duration-500 cursor-pointer">
-                <img src="/assets/clip.png" alt="Clip" className="absolute -top-6 left-1/2 w-10 h-10 -translate-x-1/2 z-20" />
+                <img src="/assets/clip-hmi.png" alt="Clip" className="absolute -top-6 left-1/2 w-10 h-10 -translate-x-1/2 z-20" />
                 <div className="w-[220px] h-[293px] md:w-[320px] md:h-[426px] bg-[#e5e5e5] p-4 shadow-frame rounded-none">
                   <div className="w-full h-[85%] bg-zinc-300 overflow-hidden flex items-center justify-center">
                     <img src="/about/photos/2.jpg" alt="Photo 2" className="w-full h-full object-cover" />
@@ -131,7 +131,7 @@ function AboutRoute() {
               </div>
 
               <div className="relative -mt-8 -rotate-1 group hover:z-20 hover:scale-105 transition-all duration-500 cursor-pointer">
-                <img src="/assets/clip.png" alt="Clip" className="absolute -top-6 left-1/2 w-10 h-10 -translate-x-1/2 z-20" />
+                <img src="/assets/clip-hmi.png" alt="Clip" className="absolute -top-6 left-1/2 w-10 h-10 -translate-x-1/2 z-20" />
                 <div className="w-[220px] h-[293px] md:w-[320px] md:h-[426px] bg-[#e5e5e5] p-4 shadow-frame rounded-none">
                   <div className="w-full h-[85%] bg-zinc-300 overflow-hidden flex items-center justify-center">
                     <img src="/about/photos/3.jpg" alt="Photo 3" className="w-full h-full object-cover" />

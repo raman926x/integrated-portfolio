@@ -42,8 +42,8 @@ function ContactRoute() {
               </span>
             </a>
             <p className="mt-5 max-w-md text-sm text-muted-foreground">
-              Replies usually within 24 hours, IST. Open to product, software
-              and identity work — collabs welcome.
+              Replies usually within 24 hours, IST. Open to automotive HMI, digital cluster,
+              and UI work — collabs welcome.
             </p>
           </div>
           <div className="md:col-span-5">
