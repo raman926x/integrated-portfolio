@@ -37,24 +37,7 @@ export function Footer() {
               and UI work — collabs welcome.
             </p>
           </div>
-          <div className="md:col-span-5">
-            <div className="grid grid-cols-2 gap-3">
-              {[
-                { label: "Dribbble", href: "https://dribbble.com/raman926x" },
-                { label: "Instagram", href: "https://www.instagram.com/ethos.ui/?utm_source=ig_web_button_share_sheet" },
-                { label: "Behance", href: "https://www.behance.net/ramandeepsingh171" },
-              ].map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  className="group flex items-center justify-between rounded-xl border border-border bg-card/40 px-4 py-3 font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:border-primary/60 hover:text-foreground"
-                >
-                  {s.label}
-                  <span className="transition-transform group-hover:translate-x-0.5">↗</span>
-                </a>
-              ))}
-            </div>
-          </div>
+
         </div>
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-border/60 pt-6 font-mono text-[11px] uppercase tracking-widest text-muted-foreground md:flex-row md:items-center">
